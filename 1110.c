@@ -44,7 +44,7 @@ void mostrar(struct lista *ini){
         }
 }
   
-struct lista *rebenta(struct lista *ini){
+struct lista *removeNo(struct lista *ini){
     if(ini->prox!=NULL){ /// se o proximo do inicio nao for nulo
   
     struct lista *aux = ini; /// um aux = ini
@@ -95,7 +95,7 @@ int main()
   
     printf("Discarded cards: ");
     for(i=0;i<v;i++){
-        ini = rebenta(ini);
+        ini = removeNo(ini);
     }
   
     printf("\n");
